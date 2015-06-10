@@ -27,7 +27,7 @@
     "ghooks": "^0.3.2",
     "espower-babel": "^3.2.0",
     "fixture-images": "^0.1.5",
-    "isparta": "github:59naga/isparta#another",
+    "isparta": "git@github.com:59naga/isparta.git#another",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.0",
     "mocha": "^2.2.5",
