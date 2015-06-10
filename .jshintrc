@@ -1,0 +1,26 @@
+{
+  "bitwise": true,
+  "quotmark": "single",
+  "indent": 2,
+  "maxcomplexity": 10,
+  "-W058": true,
+
+  "eqnull": true,
+  "unused": true,
+  "freeze": true,
+  "nonew": true,
+  "asi": true,
+
+  "esnext": true,
+
+  "node": true,
+  "browser": true,
+  "globals": {
+    "describe": true,
+    "it": true,
+    "before": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "after": true
+  }
+}

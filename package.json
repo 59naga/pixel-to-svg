@@ -1,0 +1,53 @@
+{
+  "name": "pixel-to-svg",
+  "version": "0.0.0-alpha.0",
+  "description": "ImageData to SVG <path> elements",
+
+  "scripts": {
+    "start": "mocha --compilers es6:espower-babel/guess --bail --watch --watch-extensions .es6",
+    "test": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha -- test/**/*.es6",
+    "posttest": "jshint src test -e .es6 --reporter node_modules/jshint-stylish",
+    "report": "cat coverage/lcov.info | codeclimate",
+    "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
+    "compile": "babel src --out-dir lib",
+    "postcompile": "babel index.es6 --out-file index.js"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+
+  "dependencies": {
+    "cheerio": "^0.19.0"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "codeclimate-test-reporter": "0.0.4",
+    "ghooks": "^0.3.2",
+    "espower-babel": "^3.2.0",
+    "fixture-images": "^0.1.5",
+    "isparta": "github:59naga/isparta#another",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.0",
+    "mocha": "^2.2.5",
+    "pixel": "0.0.0",
+    "power-assert": "^0.11.0"
+  },
+
+  "keywords": [
+    "pixel",
+    "pixelart",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/59naga/pixel-to-svg.git"
+  },
+  "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/59naga/pixel-to-svg/issues"
+  },
+  "homepage": "https://github.com/59naga/pixel-to-svg#readme"
+}
