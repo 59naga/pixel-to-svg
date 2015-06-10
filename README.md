@@ -1,9 +1,8 @@
-# Project [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][cover-image]][cover] [![Climate Status][climate-image]][climate]
+# PixelToSvg [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][cover-image]][cover] [![Climate Status][climate-image]][climate]
 
 > ImageData to SVG `<path>` elements
 
 ## Installation
-### Via npm
 ```bash
 $ npm install pixel-to-svg --save
 ```

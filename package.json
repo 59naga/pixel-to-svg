@@ -1,16 +1,15 @@
 {
   "name": "pixel-to-svg",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "description": "ImageData to SVG <path> elements",
 
   "scripts": {
-    "start": "mocha --compilers es6:espower-babel/guess --bail --watch --watch-extensions .es6",
-    "test": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha -- test/**/*.es6",
-    "posttest": "jshint src test -e .es6 --reporter node_modules/jshint-stylish",
+    "start": "mocha --compilers js:espower-babel/guess --bail --watch",
+    "test": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha",
+    "posttest": "jshint src test --reporter node_modules/jshint-stylish",
     "report": "cat coverage/lcov.info | codeclimate",
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
     "compile": "babel src --out-dir lib",
-    "postcompile": "babel index.es6 --out-file index.js"
   },
   "config": {
     "ghooks": {
