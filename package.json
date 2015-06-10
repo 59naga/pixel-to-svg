@@ -9,7 +9,7 @@
     "posttest": "jshint src test --reporter node_modules/jshint-stylish",
     "report": "cat coverage/lcov.info | codeclimate",
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
-    "compile": "babel src --out-dir lib",
+    "compile": "babel src --out-dir lib"
   },
   "config": {
     "ghooks": {
