@@ -9,9 +9,7 @@ $ npm install pixel-to-svg --save
 
 # API
 
-## svg.convert -> svgHTML
-
-description
+## svg.convert(imageData) -> svgHTML
 
 ```js
 var pixel= require('pixel');
