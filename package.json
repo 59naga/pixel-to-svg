@@ -5,6 +5,8 @@
 
   "scripts": {
     "start": "mocha --compilers js:espower-babel/guess --bail --watch",
+    "karma": "karma start",
+
     "test": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha",
     "posttest": "jshint src test --reporter node_modules/jshint-stylish",
     "report": "cat coverage/lcov.info | codeclimate",
@@ -22,6 +24,9 @@
   },
   "devDependencies": {
     "babel": "^5.5.6",
+    "babel-plugin-espower": "^1.0.0",
+    "babelify": "^6.1.2",
+    "brfs": "^1.4.0",
     "codeclimate-test-reporter": "0.0.4",
     "ghooks": "^0.3.2",
     "espower-babel": "^3.2.0",
@@ -29,6 +34,11 @@
     "isparta": "git://github.com/59naga/isparta.git#another",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.0",
+    "karma": "^0.12.36",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-mocha": "^0.1.10",
+    "karma-sauce-launcher": "^0.2.11",
     "mocha": "^2.2.5",
     "pixel": "0.0.0",
     "power-assert": "^0.11.0"

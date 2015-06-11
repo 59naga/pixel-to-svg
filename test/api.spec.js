@@ -14,7 +14,7 @@ let limitFileSize= 1024 * 256// kb
 describe('API',()=>{
   describe('.convert',()=>{
     it('static gif',done =>{
-      pixel.parse(fixture.path.still.gif)
+      pixel.parse(fixture.still.gif)
       .then(images =>{
         let svg= convert(images[0])
         let $= cheerio.load(svg)
@@ -33,7 +33,7 @@ describe('API',()=>{
     })
 
     it('static png',done =>{
-      pixel.parse(fixture.path.still.png)
+      pixel.parse(fixture.still.png)
       .then(images =>{
         let svg= convert(images[0])
         let $= cheerio.load(svg)
@@ -52,7 +52,7 @@ describe('API',()=>{
     })
 
     it('static jpg',done =>{
-      pixel.parse(fixture.path.still.jpg)
+      pixel.parse(fixture.still.jpg)
       .then(images =>{
         let svg= convert(images[0])
         let $= cheerio.load(svg)
@@ -71,7 +71,7 @@ describe('API',()=>{
     })
 
     it('static bmp',done =>{
-      pixel.parse(fixture.path.still.bmp)
+      pixel.parse(fixture.still.bmp)
       .then(images =>{
         let svg= convert(images[0])
         let $= cheerio.load(svg)

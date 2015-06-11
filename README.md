@@ -1,5 +1,7 @@
 # PixelToSvg [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][cover-image]][cover] [![Climate Status][climate-image]][climate]
 
+[![Sauce Test Status][sauce-image]][sauce]
+
 > ImageData to SVG `<path>` elements
 
 ## Installation
