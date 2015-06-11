@@ -2,7 +2,7 @@
 import {equal} from 'power-assert'
 import pixel from 'pixel'
 import cheerio from 'cheerio'
-import {convert} from '../src/index.js'
+import {convert} from '../src'
 
 // Fixture
 let fixture= require('fixture-images')

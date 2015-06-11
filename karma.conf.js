@@ -268,7 +268,7 @@ var customLaunchers= {
     recordVideo: true,
   },
  
-  iphone: {
+  iphone_82: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'iphone',
@@ -278,7 +278,7 @@ var customLaunchers= {
     public: 'public',
     recordVideo: true,
   },
-  iphone: {
+  iphone_71: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'iphone',
@@ -289,7 +289,7 @@ var customLaunchers= {
     recordVideo: true,
   },
 
-  ipad: {
+  ipad_82: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'ipad',
@@ -299,7 +299,7 @@ var customLaunchers= {
     public: 'public',
     recordVideo: true,
   },
-  ipad: {
+  ipad_71: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'ipad',
@@ -310,7 +310,7 @@ var customLaunchers= {
     recordVideo: true,
   },
 
-  android: {
+  android_51: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'android',
@@ -319,7 +319,7 @@ var customLaunchers= {
     public: 'public',
     recordVideo: true,
   },
-  android: {
+  android_44: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'android',
@@ -329,7 +329,7 @@ var customLaunchers= {
     public: 'public',
     recordVideo: true,
   },
-  android: {
+  android_41: {
     testName: sessionName,
     base: 'SauceLabs',
     browserName: 'android',
