@@ -6,8 +6,6 @@ module.exports= function(config) {
     conf.colors= true
     conf.logLevel= config.LOG_INFO
     conf.autoWatch= false
-
-    conf.browsers= Object.keys(customLaunchers)
     conf.singleRun= true
   }
   config.set(conf)
