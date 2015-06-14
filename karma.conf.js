@@ -1,11 +1,11 @@
 module.exports= function(config) {
   if(process.env.TRAVIS){
-    conf.customLaunchers= customLaunchers
-    conf.reporters= ['dots', 'saucelabs']
+    conf.browsers= ['Sauce']
+    conf.reporters= ['sauce']
 
     conf.colors= true
     conf.logLevel= config.LOG_INFO
-    conf.autoWatch= true
+    conf.autoWatch= false
 
     conf.browsers= Object.keys(customLaunchers)
     conf.singleRun= true

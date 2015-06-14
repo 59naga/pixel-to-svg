@@ -28,7 +28,7 @@ env:
 # Cloud test(optional)
 after_deploy:
   - 'npm install'
-  - 'npm run karma && echo perfect || echo good luck'
+  - 'npm run karma && echo pending || echo pending'
 
 # Npm publish options
 before_deploy:
