@@ -4,7 +4,7 @@ module.exports= function(config) {
     conf.reporters= ['sauce']
 
     conf.colors= true
-    conf.logLevel= config.LOG_INFO
+    conf.logLevel= 'INFO'
     conf.autoWatch= false
     conf.singleRun= true
   }
@@ -42,6 +42,7 @@ var conf= {
     debug: true,
     transform: [
       ['babelify', {plugins: ['babel-plugin-espower']}],
+      ['varify'],
       ['brfs'],
     ],
     extensions: ['.js'],
@@ -63,7 +64,7 @@ var conf= {
 
   // level of logging
   // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-  logLevel: 'INFO',
+  logLevel: 'DEBUG',
 
 
   // enable / disable watching file and executing tests whenever any file changes
