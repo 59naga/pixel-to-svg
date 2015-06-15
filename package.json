@@ -36,8 +36,9 @@
     "jshint-stylish": "^2.0.0",
     "karma": "^0.12.36",
     "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.1.12",
     "karma-mocha": "^0.1.10",
-    "karma-saucelabs-launcher": "^0.0.0-alpha",
+    "karma-saucelabs-launcher": "^0.0.0-beta.1",
     "mocha": "^2.2.5",
     "pixel": "0.0.1-alpha.0",
     "power-assert": "^0.11.0"
