@@ -24,11 +24,16 @@ pixel.parse('http://cdn.rawgit.com/59naga/fixture-images/master/still.PNG')
 ```
 
 # Related projects
+* [pixel-util](https://github.com/59naga/pixel-util/)
+* [pixel-gif](https://github.com/59naga/pixel-gif-/)
+* [pixel-png](https://github.com/59naga/pixel-png/)
+* [pixel-jpg](https://github.com/59naga/pixel-jpg/)
+* [pixel-bmp](https://github.com/59naga/pixel-bmp/)
+* [pixel](https://github.com/59naga/pixel/)
+* [pixel-to-ansi](https://github.com/59naga/pixel-to-ansi/)
+* __pixel-to-svg__
 * [jaggy](https://github.com/59naga/jaggy/)
 * [vectorizer](https://github.com/59naga/vectorizer/)
-* __pixel-to-svg__
-* [pixel-to-ansi](https://github.com/59naga/pixel-to-ansi/)
-* [pixel](https://github.com/59naga/pixel/)
 
 License
 ---

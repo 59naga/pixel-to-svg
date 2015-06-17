@@ -1,21 +1,24 @@
 {
   "name": "pixel-to-svg",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2",
   "description": "ImageData to SVG <path> elements",
 
   "scripts": {
     "start": "mocha --compilers js:espower-babel/guess --bail --watch",
-    "karma": "karma start",
+    "localhost": "karma start",
 
     "test": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha",
     "posttest": "jshint src test --reporter node_modules/jshint-stylish",
     "report": "cat coverage/lcov.info | codeclimate",
+
+    "test-cloud": "karma-sauce --log-level INFO --timeout 3000",
+
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
     "compile": "babel src --out-dir lib"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm test"
     }
   },
 
@@ -38,9 +41,9 @@
     "karma-browserify": "^4.2.1",
     "karma-chrome-launcher": "^0.1.12",
     "karma-mocha": "^0.1.10",
-    "karma-saucelabs-launcher": "^0.0.0-beta.1",
+    "karma-saucelabs-launcher": "^0.0.0-beta.5",
     "mocha": "^2.2.5",
-    "pixel": "0.0.1-alpha.0",
+    "pixel": "0.0.1-alpha.2",
     "power-assert": "^0.11.0",
     "varify": "^0.1.1"
   },
