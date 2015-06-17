@@ -11,7 +11,7 @@
     "posttest": "jshint src test --reporter node_modules/jshint-stylish",
     "report": "cat coverage/lcov.info | codeclimate",
 
-    "test-cloud": "karma-sauce --log-level INFO --timeout 3000",
+    "test-cloud": "karma-sauce --log-level INFO",
 
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
     "compile": "babel src --out-dir lib"
