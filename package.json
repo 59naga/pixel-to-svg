@@ -1,6 +1,6 @@
 {
   "name": "pixel-to-svg",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.3",
   "description": "ImageData to SVG <path> elements",
 
   "scripts": {

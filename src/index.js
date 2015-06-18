@@ -2,8 +2,15 @@
 import Svg from './svg'
 
 // Public
-let convert= (image)=>{
-  return new Svg(image).html()
+class PixelToSvg{
+  constructor(){
+    // TODO export.className= Any
+    this.PixelToSvg= PixelToSvg
+    this.Svg= Svg
+  }
+  convert(image){
+    return new Svg(image).html()
+  }
 }
 
-export {Svg,convert}
+export default new PixelToSvg
