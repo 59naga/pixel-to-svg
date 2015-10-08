@@ -16,11 +16,11 @@ $ npm install pixel-to-svg --save
 ```js
 var pixel= require('pixel');
 var svg= require('pixel-to-svg');
-pixel.parse('http://cdn.rawgit.com/59naga/fixture-images/master/still.PNG')
+pixel.parse('https://cdn.rawgit.com/59naga/pixel-to-svg/master/test/10x10.png')
 .then(function(images){
   console.log(svg.convert(images[0]));
 });
-// <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="crispEdges" width="112" height="112" viewBox="0 0 112 112"><g><path fill="rgba(0,0,0,255)" d="M0,0h112v1h-112ZM0,1h51v2h-51ZM84,1h2v2h-2ZM111,1h1v2h-1ZM0,3h51v2h-51ZM84,3h2v2h-2ZM111,3h1v2h-1ZM0,5h51v2h-51ZM84,5h2v2h-2ZM111,5h1v2h-1ZM0,7h51v2h-51ZM84,7h2v2h-2ZM111,7h1v2h-1ZM0,9h51v2h-51ZM84,9h2v2h-2ZM111,9h1v2h-1ZM0,11h51v2h-51ZM84,11h2v2h-2ZM111,11h1v2h-1ZM0,13h5 ...
+// <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="crispEdges" width="10" height="10" viewBox="0 0 10 10"><g><path fill="rgba(0,0,0,255)" d="M0,0h10v10h-10Z"/></g></svg>
 ```
 
 # Related projects
