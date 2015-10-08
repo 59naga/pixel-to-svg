@@ -1,7 +1,12 @@
 {
   "name": "pixel-to-svg",
-  "version": "0.0.0-alpha.3",
+  "version": "0.0.0",
   "description": "ImageData to SVG <path> elements",
+
+  "main": "lib",
+  "files": [
+    "lib"
+  ],
 
   "scripts": {
     "start": "mocha --compilers js:espower-babel/guess --bail --watch",
@@ -13,6 +18,10 @@
 
     "test-cloud": "karma-sauce --log-level INFO",
 
+    "prebuild": "browserify src -t babelify --debug -s pixelToSvg | exorcist pixel-to-svg.js.map -b . > pixel-to-svg.js",
+    "build": "uglifyjs pixel-to-svg.js --in-source-map pixel-to-svg.js.map --mangle --compress --output pixel-to-svg.min.js --source-map pixel-to-svg.min.js.map",
+    "postbuild": "rm pixel-to-svg.js pixel-to-svg.js.map && wc -c pixel-to-svg*",
+
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
     "compile": "babel src --out-dir lib"
   },
@@ -23,28 +32,31 @@
   },
 
   "dependencies": {
-    "cheerio": "git://github.com/cheeriojs/cheerio#29d38e32889417390ee682b4169d6f9eee5f9d14"
+    "cheerio": "^0.19.0"
   },
   "devDependencies": {
-    "babel": "^5.5.6",
+    "babel": "^5.8.23",
     "babel-plugin-espower": "^1.0.0",
-    "babelify": "^6.1.2",
-    "brfs": "^1.4.0",
+    "babelify": "^6.3.0",
+    "brfs": "^1.4.1",
+    "browserify": "^11.2.0",
     "codeclimate-test-reporter": "0.0.4",
-    "ghooks": "^0.3.2",
-    "espower-babel": "^3.2.0",
+    "espower-babel": "^3.3.0",
+    "exorcist": "^0.4.0",
     "fixture-images": "^0.1.5",
-    "isparta": "2.2.0",
+    "ghooks": "^0.3.2",
+    "isparta": "^2.2.0",
     "jshint": "^2.8.0",
-    "jshint-stylish": "^2.0.0",
-    "karma": "^0.12.36",
-    "karma-browserify": "^4.2.1",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.12.37",
+    "karma-browserify": "^4.4.0",
     "karma-chrome-launcher": "^0.1.12",
     "karma-mocha": "^0.1.10",
-    "karma-saucelabs-launcher": "^0.0.0-beta.5",
-    "mocha": "^2.2.5",
+    "karma-saucelabs-launcher": "0.0.0-beta.5",
+    "mocha": "^2.3.3",
     "pixel": "0.0.1-alpha.2",
     "power-assert": "^0.11.0",
+    "uglify-js": "^2.4.24",
     "varify": "^0.1.1"
   },
 

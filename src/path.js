@@ -1,3 +1,6 @@
+// Dependencies
+import D from './d'
+
 // Public
 class Path{
   constructor(){
@@ -15,11 +18,11 @@ class Path{
     }
   }
   toElement(){
-    // TODO: lines to rect
     let d= ''
     let rendered= []
 
     let rects= {}
+    let history= {}
     for(let point in this.lines){
       let line= this.lines[point]
       if(rendered.indexOf(line) > -1){
@@ -27,12 +30,14 @@ class Path{
       }
 
       let {x,y,width}= line
-      let continualRect= rects[`${x},${y-1}`]
+      let continualRect= history[`${x},${y-1}`]
       if(continualRect && continualRect.width==width){
         continualRect.height++
+        history[`${x},${y}`]= continualRect
       }
       else{
         rects[`${x},${y}`]= line
+        history[`${x},${y}`]= line
       }
       rendered.push(line)
     }
@@ -41,20 +46,6 @@ class Path{
       d+= rects[point].toString()
     }
     return d
-  }
-}
-class D{
-  constructor(x,y){
-    this.x= x
-    this.y= y
-    this.width= 1
-    this.height= 1
-  }
-  toString(){
-    let {x,y,width,height}= this
-
-    // 1pixel = <path d='M0,0 h1 v1 h-1 z'>
-    return 'M'+x+','+y+'h'+width+'v'+height+'h-'+width+'Z'
   }
 }
 

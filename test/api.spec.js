@@ -3,6 +3,7 @@ import {equal} from 'power-assert'
 import pixel from 'pixel'
 import cheerio from 'cheerio'
 import pixelToSvg from '../src'
+import fs from 'fs'
 
 // Fixture
 let fixture= require('fixture-images')
@@ -12,8 +13,29 @@ let limitFileSize= 1024 * 256// kb
 
 // Specs
 describe('API',()=>{
-  it('has .Svg',()=>{
+  it('has constructors',()=>{
     equal(typeof pixelToSvg.Svg, 'function')
+    equal(typeof pixelToSvg.Path, 'function')
+    equal(typeof pixelToSvg.D, 'function')
+  })
+  it('black 10x10 rect',done =>{
+    let black= fs.readFileSync('test/10x10.png')
+    pixel.parse(black)
+    .then(images =>{
+      let svg= pixelToSvg.convert(images[0])
+      let $= cheerio.load(svg)
+
+      let {width,height}= $('svg').attr()
+      let colors= $('path').length
+      let underFileSize= svg.length < limitFileSize
+
+      equal(width,10)
+      equal(height,10)
+      equal(colors,1)
+      equal(underFileSize,true)
+
+      done()
+    })
   })
   describe('.convert',()=>{
     it('static gif',done =>{

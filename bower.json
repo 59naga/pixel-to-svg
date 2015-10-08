@@ -1,0 +1,17 @@
+{
+  "name": "pixel-to-svg",
+  "main": "pixel-to-svg.min.js",
+  "homepage": "https://github.com/59naga/pixel-to-svg",
+  "authors": [
+    "59naga <i59naga@icloud.com>"
+  ],
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
