@@ -32,7 +32,7 @@
   },
 
   "dependencies": {
-    "cheerio": "^0.19.0"
+    "cheerio": "git://github.com/cheeriojs/cheerio#03c8e85a8a288375a009422bde6102d362be718f"
   },
   "devDependencies": {
     "babel": "^5.8.23",
