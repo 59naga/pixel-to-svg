@@ -52,7 +52,7 @@
     "karma-browserify": "^4.4.0",
     "karma-chrome-launcher": "^0.1.12",
     "karma-mocha": "^0.1.10",
-    "karma-saucelabs-launcher": "0.0.0-beta.5",
+    "karma-saucelabs-launcher": "^0.0.0",
     "mocha": "^2.3.3",
     "pixel": "0.0.1-alpha.2",
     "power-assert": "^0.11.0",
