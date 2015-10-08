@@ -3,7 +3,7 @@ import {equal} from 'power-assert'
 import pixel from 'pixel'
 import cheerio from 'cheerio'
 import pixelToSvg from '../src'
-import fs from 'fs'
+let fs= require('fs') // Fix substack/brfs#39
 
 // Fixture
 let fixture= require('fixture-images')
