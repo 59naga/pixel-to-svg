@@ -4,6 +4,8 @@
 
 > ImageData to SVG `<path>` elements
 
+[DEMO](http://img2svg.berabou.me/)
+
 ## Installation
 ```bash
 $ npm install pixel-to-svg --save
